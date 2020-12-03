@@ -25,8 +25,11 @@ class LiveDataActivity : AppCompatActivity() {
             viewModel.clear()
         }
 
-        viewModel.counter.observe(this, Observer {
-            count -> tv.text = count.toString()
+        viewModel.counter.observe(this, { count -> tv.text = count.toString() })
+
+        // 疑问：一个一个这样写，岂不是很麻烦？
+        viewModel.num.observe(this, Observer<Int>() { num ->
+            tv.text = num.toString()
         })
     }
 }
