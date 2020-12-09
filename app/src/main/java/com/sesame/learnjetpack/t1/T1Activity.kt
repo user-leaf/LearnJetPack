@@ -15,8 +15,8 @@ class T1Activity : AppCompatActivity() {
 
         val viewModel = ViewModelProvider(this).get(T1ViewModel::class.java)
 
-        viewModel.name.observe(this, Observer { value -> tvShow.setText(value) })
-        viewModel.age.observe(this, Observer { value -> tvShow.setText("$value") })
+        viewModel.nameLiveData.observe(this, Observer { value -> tvShow.setText(value) })
+        viewModel.ageLiveData.observe(this, Observer { value -> tvShow.setText("$value") })
 
         plusOneBtn.setOnClickListener {
             viewModel.plusOne()
@@ -30,5 +30,12 @@ class T1Activity : AppCompatActivity() {
             viewModel.clear()
         }
 
+//        viewModel.studentLiveData.observe(this, Observer { stu ->
+//            tvShow.text = stu.toString()
+//        })
+
+        viewModel.stuNameLiveData.observe(this, Observer { stuName ->
+            tvShow.text = stuName
+        })
     }
 }
