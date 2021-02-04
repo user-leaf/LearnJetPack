@@ -33,6 +33,9 @@
         </activity>
 
         <activity android:name=".t2.T2Activity">
+
+        </activity>
+        <activity android:name=".date20210203.MyLifecycleActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
