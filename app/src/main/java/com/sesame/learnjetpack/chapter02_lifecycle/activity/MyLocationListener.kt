@@ -1,4 +1,4 @@
-package com.sesame.learnjetpack.m02_lifecycle.activity
+package com.sesame.learnjetpack.chapter02_lifecycle.activity
 
 import android.content.Context
 import android.util.Log

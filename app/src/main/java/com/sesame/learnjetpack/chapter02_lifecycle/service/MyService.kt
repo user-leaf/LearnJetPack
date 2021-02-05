@@ -1,4 +1,4 @@
-package com.sesame.learnjetpack.m02_lifecycle.service
+package com.sesame.learnjetpack.chapter02_lifecycle.service
 
 import androidx.lifecycle.LifecycleService
 

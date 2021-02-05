@@ -1,4 +1,4 @@
-package com.sesame.learnjetpack.m02_lifecycle.activity
+package com.sesame.learnjetpack.chapter02_lifecycle.activity
 
 interface OnLocationChangedCallback {
     fun onChange(name: String, age: Int)

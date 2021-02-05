@@ -1,12 +1,12 @@
-package com.sesame.learnjetpack.m02_lifecycle
+package com.sesame.learnjetpack.chapter02_lifecycle
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.sesame.learnjetpack.R
-import com.sesame.learnjetpack.m02_lifecycle.activity.MyLocationListener
-import com.sesame.learnjetpack.m02_lifecycle.activity.OnLocationChangedCallback
-import com.sesame.learnjetpack.m02_lifecycle.service.MyService
+import com.sesame.learnjetpack.chapter02_lifecycle.activity.MyLocationListener
+import com.sesame.learnjetpack.chapter02_lifecycle.activity.OnLocationChangedCallback
+import com.sesame.learnjetpack.chapter02_lifecycle.service.MyService
 import kotlinx.android.synthetic.main.activity_my_lifecycle.*
 
 class MyLifecycleActivity : AppCompatActivity() {
