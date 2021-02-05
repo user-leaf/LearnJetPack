@@ -35,7 +35,10 @@
         <activity android:name=".t2.T2Activity">
 
         </activity>
-        <activity android:name=".chapter02_lifecycle.MyLifecycleActivity" >
+        <activity android:name=".chapter02_lifecycle.MyLifecycleActivity">
+
+        </activity>
+        <activity android:name=".chapter03_navigation.NavActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
