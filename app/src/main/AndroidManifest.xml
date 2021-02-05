@@ -35,7 +35,7 @@
         <activity android:name=".t2.T2Activity">
 
         </activity>
-        <activity android:name=".date20210203.MyLifecycleActivity" >
+        <activity android:name=".m02_lifecycle.MyLifecycleActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -43,6 +43,7 @@
             </intent-filter>
         </activity>
 
+        <service android:name=".m02_lifecycle.service.MyService" />
     </application>
 
 </manifest>
