@@ -39,6 +39,9 @@
 
         </activity>
         <activity android:name=".chapter03_navigation.NavActivity">
+
+            <nav-graph android:value="@navigation/nav_graph" />
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

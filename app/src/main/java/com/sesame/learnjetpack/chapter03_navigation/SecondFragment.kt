@@ -1,6 +1,7 @@
 package com.sesame.learnjetpack.chapter03_navigation
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +11,7 @@ import kotlinx.android.synthetic.main.fragment_second.view.*
 
 class SecondFragment : Fragment() {
 
+    private val TAG = this::class.java.simpleName
     private lateinit var userName: String
     private var age: Int = 0
 
@@ -20,7 +22,14 @@ class SecondFragment : Fragment() {
         if (bundle != null) {
             userName = MainFragmentArgs.fromBundle(bundle).userName
             age = MainFragmentArgs.fromBundle(bundle).age
+
+
+            val params = bundle.getString("params")
+
+            Log.d(TAG, "onCreate: " + params)
         }
+
+
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,

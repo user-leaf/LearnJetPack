@@ -9,7 +9,7 @@
         android:id="@+id/mainFragment"
         android:name="com.sesame.learnjetpack.chapter03_navigation.MainFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" >
+        tools:layout="@layout/fragment_main">
         <action
             android:id="@+id/action_mainFragment_to_secondFragment"
             app:destination="@id/secondFragment"
@@ -17,18 +17,22 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
-        <argument android:name="user_name"
-            app:argType="string"
-            android:defaultValue='"unknown"' />
+        <argument
+            android:name="user_name"
+            android:defaultValue='"unknown"'
+            app:argType="string" />
         <argument
             android:name="age"
-            app:argType="integer"
-            android:defaultValue="0" />
+            android:defaultValue="0"
+            app:argType="integer" />
 
     </fragment>
     <fragment
         android:id="@+id/secondFragment"
         android:name="com.sesame.learnjetpack.chapter03_navigation.SecondFragment"
         android:label="fragment_second"
-        tools:layout="@layout/fragment_second" />
+        tools:layout="@layout/fragment_second">
+
+        <deepLink app:uri="www.jujin.com/{params}" />
+    </fragment>
 </navigation>
