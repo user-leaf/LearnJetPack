@@ -36,8 +36,14 @@ class MainFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
         val inflate = inflater.inflate(R.layout.fragment_main, container, false)
 
+
         inflate.findViewById<Button>(R.id.btnToSecondFragment).setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.action_mainFragment_to_secondFragment)
+            val bundle = MainFragmentArgs.Builder()
+                    .setUserName("Michael")
+                    .setAge(30)
+                    .build()
+                    .toBundle()
+            Navigation.findNavController(it).navigate(R.id.action_mainFragment_to_secondFragment, bundle)
         }
 
         return inflate
