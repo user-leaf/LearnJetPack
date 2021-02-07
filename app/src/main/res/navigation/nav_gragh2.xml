@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_gragh2"
+    app:startDestination="@id/myNavFragment">
+
+    <fragment
+        android:id="@+id/myNavFragment"
+        android:name="com.sesame.learnjetpack.chapter03_navigation.mine.MyNavFragment"
+        android:label="fragment_my_nav"
+        tools:layout="@layout/fragment_my_nav" >
+        <action
+            android:id="@+id/action_myNavFragment_to_myNav2Fragment"
+            app:destination="@id/myNav2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myNav2Fragment"
+        android:name="com.sesame.learnjetpack.chapter03_navigation.mine.MyNav2Fragment"
+        android:label="fragment_my_nav2"
+        tools:layout="@layout/fragment_my_nav2" />
+</navigation>
