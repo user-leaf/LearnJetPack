@@ -1,12 +1,13 @@
 package com.sesame.learnjetpack.chapter03_navigation.mine
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.sesame.learnjetpack.R
+import com.sesame.learnjetpack.model.Person
 import kotlinx.android.synthetic.main.fragment_my_nav.view.*
 
 // TODO: Rename parameter arguments, choose names that match
@@ -45,7 +46,15 @@ class MyNavFragment : Fragment() {
 //            Navigation.createNavigateOnClickListener(R.id.action_myNavFragment_to_myNav2Fragment)
 //        }
 
-        inflate.btnNext.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_myNavFragment_to_myNav2Fragment))
+//        inflate.btnNext.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_myNavFragment_to_myNav2Fragment))
+
+        inflate.btnNext.setOnClickListener{
+            val person = Person("xx", 18)
+            val bundle = Bundle()
+            bundle.putSerializable("bundle", person)
+            Navigation.findNavController(it).navigate(R.id.action_myNavFragment_to_myNav2Fragment, bundle)
+        }
+
         return inflate
     }
 

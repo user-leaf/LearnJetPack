@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_myNavFragment_to_myNav2Fragment"
             app:destination="@id/myNav2Fragment" />
+        <argument
+            android:name="person"
+            app:argType="com.sesame.learnjetpack.model.Person" />
     </fragment>
     <fragment
         android:id="@+id/myNav2Fragment"

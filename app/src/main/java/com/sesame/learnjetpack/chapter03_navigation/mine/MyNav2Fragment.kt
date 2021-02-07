@@ -1,11 +1,12 @@
 package com.sesame.learnjetpack.chapter03_navigation.mine
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.sesame.learnjetpack.R
+import com.sesame.learnjetpack.model.Person
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -27,7 +28,11 @@ class MyNav2Fragment : Fragment() {
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
+
+            val person: Person = it.getSerializable("bundle") as Person
+            println("@@@ Page2 person: $person")
         }
+
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
