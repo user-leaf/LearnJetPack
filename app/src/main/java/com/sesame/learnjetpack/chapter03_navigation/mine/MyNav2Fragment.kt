@@ -29,8 +29,8 @@ class MyNav2Fragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
 
-            val person: Person = it.getSerializable("bundle") as Person
-            println("@@@ Page2 person: $person")
+//            val person: Person = it.getSerializable("bundle") as Person
+//            println("@@@ Page2 person: $person")
         }
 
     }
@@ -38,7 +38,13 @@ class MyNav2Fragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_my_nav2, container, false)
+        val inflate = inflater.inflate(R.layout.fragment_my_nav2, container, false)
+
+        val bundle = arguments
+        if (bundle != null) {
+            println("page2 bundle::" + bundle.getString("params"))
+        }
+        return inflate
     }
 
     companion object {

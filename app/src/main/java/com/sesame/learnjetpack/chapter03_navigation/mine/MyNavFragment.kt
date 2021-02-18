@@ -48,11 +48,16 @@ class MyNavFragment : Fragment() {
 
 //        inflate.btnNext.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_myNavFragment_to_myNav2Fragment))
 
-        inflate.btnNext.setOnClickListener{
+        inflate.btnNext.setOnClickListener {
             val person = Person("xx", 18)
             val bundle = Bundle()
             bundle.putSerializable("bundle", person)
             Navigation.findNavController(it).navigate(R.id.action_myNavFragment_to_myNav2Fragment, bundle)
+        }
+
+        val bundle = arguments
+        if (bundle != null) {
+            println("page1 bundle::" + bundle.getString("params"))
         }
 
         return inflate

@@ -9,17 +9,22 @@
         android:id="@+id/myNavFragment"
         android:name="com.sesame.learnjetpack.chapter03_navigation.mine.MyNavFragment"
         android:label="fragment_my_nav"
-        tools:layout="@layout/fragment_my_nav" >
+        tools:layout="@layout/fragment_my_nav">
         <action
             android:id="@+id/action_myNavFragment_to_myNav2Fragment"
             app:destination="@id/myNav2Fragment" />
         <argument
             android:name="person"
             app:argType="com.sesame.learnjetpack.model.Person" />
+
+        <deepLink app:uri="www.xxx.com/page1/{params}" />
     </fragment>
     <fragment
         android:id="@+id/myNav2Fragment"
         android:name="com.sesame.learnjetpack.chapter03_navigation.mine.MyNav2Fragment"
         android:label="fragment_my_nav2"
-        tools:layout="@layout/fragment_my_nav2" />
+        tools:layout="@layout/fragment_my_nav2">
+
+        <deepLink app:uri="www.xxx.com/page2/{params}" />
+    </fragment>
 </navigation>
