@@ -18,11 +18,11 @@ public class TimerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_timer);
         final TextView tvTimer = findViewById(R.id.tvTime);
 
-        TimerViewModel timerViewModel1 = new ViewModelProvider(this, new ViewModelProvider.NewInstanceFactory())
-                .get(TimerViewModel.class);
-
-//        TimerViewModel timerViewModel = new ViewModelProvider(this, new ViewModelProvider.AndroidViewModelFactory(this.getApplication()))
+//        TimerViewModel timerViewModel1 = new ViewModelProvider(this, new ViewModelProvider.NewInstanceFactory())
 //                .get(TimerViewModel.class);
+
+        TimerViewModel timerViewModel1 = new ViewModelProvider(this, new ViewModelProvider.AndroidViewModelFactory(this.getApplication()))
+                .get(TimerViewModel.class);
 
         timerViewModel1.setOnTimeChange(new TimerViewModel.OnTimeChange() {
             @Override
