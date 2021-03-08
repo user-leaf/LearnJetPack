@@ -1,0 +1,10 @@
+ext {
+
+    depsVersion = [
+            rxjava: '2.2.0'
+    ]
+
+    depsLibs = [
+            rxjava: "io.reactivex.rxjava2:rxjava:${depsVersion.rxjava}"
+    ]
+}

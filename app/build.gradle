@@ -9,8 +9,8 @@ android {
 
     defaultConfig {
         applicationId "com.sesame.learnjetpack"
-        minSdkVersion 15
-        targetSdkVersion 29
+        minSdkVersion ANDROID_MIN_SDK_VERSION as int
+        targetSdkVersion ANDROID_TARGET_SDK_VERSION as int
         versionCode 1
         versionName "1.0"
 
@@ -49,7 +49,7 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
 
-    implementation 'io.reactivex.rxjava2:rxjava:2.2.0'
+    implementation rootProject.depsLibs.rxjava
 }
 repositories {
     mavenCentral()
